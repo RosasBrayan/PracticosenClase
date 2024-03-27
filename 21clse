@@ -1,0 +1,42 @@
+import random
+
+valor1 = random.randint(1, 6)
+valor2 = random.randint(1, 6)
+valor3 = random.randint(1, 6)
+valorSumatoria = valor1 + valor2 + valor3
+print("El valor sumado de los dados es:", valorSumatoria)
+valorOpc = int(input("Desea aumentar un turno mas? Ingrese 1 para Si, 2 para No: "))
+
+if valorOpc == 1:
+    valor4 = random.randint(1, 6)
+    valorSumatoria2 = valorSumatoria + valor4
+    print("El valor sumado es:", valorSumatoria2)
+
+    valorOpc2 = int(input("Desea aumentar un turno más? Ingrese 1 para Si, 2 para No: "))
+
+    if valorOpc2 == 1:
+        valor6 = random.randint(1, 6)
+        valorSumatoria3 = valorSumatoria2 + valor6
+        print("El valor sumado es:", valorSumatoria3)
+
+        valorOpc3 = int(input("Desea aumentar un turno más? Ingrese 1 para Si, 2 para No: "))
+
+        if valorOpc3 == 1:
+            valor7 = random.randint(1, 6)
+            valorSumatoria4 = valorSumatoria3 + valor7
+            print("El valor sumado es:", valorSumatoria4)
+
+            valorOpc4 = int(input("Desea aumentar un turno más? Ingrese 1 para Si, 2 para No: "))
+
+            if valorOpc4 == 1:
+                valor8 = random.randint(1, 6)
+                valorSumatoria5 = valorSumatoria4 + valor8
+                print("El valor sumado es:", valorSumatoria5)
+            else:
+                print("El valor es:", valorSumatoria4)
+        else:
+            print("El valor es:", valorSumatoria3)
+    else:
+        print("El valor es:", valorSumatoria2)
+else:
+    print("El valor es:", valorSumatoria)
