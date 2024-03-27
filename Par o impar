@@ -1,0 +1,25 @@
+import random
+
+def lanzar_dados():
+    return random.randint(1, 6) + random.randint(1, 6)
+
+def par_o_impar(valor, eleccion):
+    return (valor % 2 == 0 and eleccion == 'par') or (valor % 2 != 0 and eleccion == 'impar')
+
+def main():
+    print("Bienvenido al juego 'Par o Impar' con dados!")
+    while True:
+        valor = lanzar_dados()
+        eleccion = input("Elige 'par' o 'impar': ").lower()
+
+        if par_o_impar(valor, eleccion):
+            print(f"Ganaste, tiraste {valor} y elegiste {eleccion}!")
+        else:
+            print(f"Perdiste, tiraste {valor} y elegiste {eleccion}!")
+
+        play_again = input("¿Deseas jugar de nuevo (sí/no)? ").lower()
+        if play_again != 'sí':
+            break
+
+if __name__ == "__main__":
+    main()
